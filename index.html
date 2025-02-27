@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ID Card Generator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>ID Card Generator</h1>
+    <form id="idForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Enter your name" required>
+
+      <label for="level">Level:</label>
+      <input type="text" id="level" placeholder="Enter your level" required>
+
+      <label for="idNumber">ID Number:</label>
+      <input type="text" id="idNumber" placeholder="Enter your ID number" required>
+
+      <label for="address">Address:</label>
+      <input type="text" id="address" placeholder="Enter your address" required>
+
+
+      <label for="photo">Upload Photo:</label>
+      <input type="file" id="photo" accept="image/*" required>
+
+      <button type="submit">Generate ID Card</button>
+    </form>
+
+    <div id="main-id">
+      <div id="idCard" class="id-card">
+        <h2>ID Card</h2>
+        <div class="company-logo">
+          <img class="comp-logo" src="company-logo.png" alt="Company Logo">
+        </div>
+      </div>
+      <div id="displayPhoto" class="photo"></div>
+      <div class="details-column">
+        <p><strong>Name:</strong> <span id="displayName"></span></p>
+        <p><strong>Level:</strong> <span id="displayLevel"></span></p>
+        <p><strong>ID Number:</strong> <span id="displayIdNumber"></span></p>
+        <p><strong>Address:</strong> <span id="displayAddress"></span></p>
+        <p class="comp-add">Safe and Secure Online Marketing Pvt. Ltd
+          <br>A-3/24 Janakpuri, New Delhi - 110058,
+          <br>Ph: 01145674444 | E-mail: support@safeshopindia.com
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <button id="downloadBtn" style="margin-top: 10px; display: none;">Download ID Card</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
